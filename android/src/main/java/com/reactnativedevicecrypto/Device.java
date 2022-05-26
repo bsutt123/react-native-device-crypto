@@ -14,7 +14,7 @@ import com.facebook.react.bridge.ReadableMap;
 
 public class Device {
     public static boolean hasEnrolledBiometry(@NonNull final ReactApplicationContext context) {
-        return BiometricManager.from(context).canAuthenticate(BIOMETRIC_STRONG | BIOMETRIC_WEAK) == BIOMETRIC_SUCCESS;
+        return BiometricManager.from(context).canAuthenticate(BIOMETRIC_STRONG) == BIOMETRIC_SUCCESS;
     }
 
     public static boolean hasPinOrPassword(@NonNull final ReactApplicationContext context) {
